@@ -1,0 +1,311 @@
+body {
+  font-family: Verdana, sans-serif;
+  font-size: 0.95em;
+  line-height: 1.6;
+  margin: 0;
+  color: #ffffff;
+  background-color: #13294b;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+.site-header {
+  padding: 0;
+}
+
+.hero {
+  padding: 3rem 1.25rem;
+  text-align: center;
+  background-image:
+    linear-gradient(rgba(19, 41, 75, 0.85), rgba(19, 41, 75, 0.85)),
+    url("../images/image1.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.hero h1,
+.hero .tagline,
+h2,
+h3,
+.site-nav a,
+.toggle-btn {
+  font-family: "Montserrat", Verdana, sans-serif;
+}
+
+.hero h1 {
+  margin: 0 0 0.5rem 0;
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: #ffffff;
+}
+
+.tagline {
+  margin: 0 0 1rem 0;
+}
+
+.site-nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.75rem;
+}
+
+.site-nav a {
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 700;
+  padding: 0.45rem 0.8rem;
+  border: 1px solid rgba(255, 255, 255, 0.65);
+  border-radius: 0.35rem;
+}
+
+.site-nav a:hover,
+.site-nav a:focus,
+.site-nav a[aria-current="page"] {
+  background-color: rgba(255, 255, 255, 0.15);
+}
+
+main {
+  max-width: 72rem;
+  margin: 0 auto;
+  padding: 1.25rem;
+}
+
+section,
+aside,
+article,
+footer {
+  box-sizing: border-box;
+}
+
+h2 {
+  margin-top: 0;
+  color: #ffffff;
+}
+
+h3 {
+  margin-top: 0;
+  color: #13294b;
+}
+
+p,
+li {
+  color: #ffffff;
+}
+
+ul {
+  padding-left: 1.25rem;
+}
+
+a {
+  color: #dbeefe;
+}
+
+a:hover,
+a:focus {
+  text-decoration: underline;
+}
+
+.home-layout,
+.page-grid,
+.tips-layout {
+  display: grid;
+  gap: 1.25rem;
+}
+
+.home-mission,
+.home-image,
+.home-trust,
+.home-links,
+.intro,
+.sidebar,
+.routine-section,
+.tips-intro,
+.tips-highlight,
+.tips-list,
+.tips-sidebar {
+  background-color: rgba(255, 255, 255, 0.08);
+  padding: 1.25rem;
+  border-radius: 0.75rem;
+}
+
+.home-figure,
+.side-figure {
+  margin: 0;
+}
+
+.featured-img {
+  width: 100%;
+  height: auto;
+  border-radius: 0.6rem;
+}
+
+figcaption {
+  margin-top: 0.5rem;
+  font-size: 0.9rem;
+  text-align: center;
+  color: #dbeefe;
+}
+
+.routine-cards,
+.tips-cards {
+  display: grid;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.card,
+.tip-card {
+  background-color: #ffffff;
+  color: #13294b;
+  padding: 1rem;
+  border-radius: 0.75rem;
+  box-shadow: 0 0.2rem 0.6rem rgba(0, 0, 0, 0.2);
+}
+
+.card p,
+.tip-card p,
+.tip-card li,
+.card li {
+  color: #13294b;
+}
+
+.tip-details {
+  margin-top: 0.75rem;
+}
+
+.is-hidden {
+  display: none;
+}
+
+.toggle-btn {
+  font-size: 0.95rem;
+  color: #13294b;
+  background-color: #ffffff;
+  border: 2px solid #13294b;
+  padding: 0.5rem 0.75rem;
+  cursor: pointer;
+  border-radius: 0.35rem;
+}
+
+.toggle-btn:hover,
+.toggle-btn:focus {
+  background-color: #dbeefe;
+}
+
+footer {
+  margin-top: 1.5rem;
+  padding: 1rem;
+  text-align: center;
+  background-color: #0f213d;
+  color: #ffffff;
+}
+
+/* Medium screens */
+@media (min-width: 40em) {
+  .home-layout {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .home-mission {
+    grid-column: 1 / 2;
+  }
+
+  .home-image {
+    grid-column: 2 / 3;
+  }
+
+  .home-trust,
+  .home-links {
+    grid-column: span 1;
+  }
+
+  .page-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .intro {
+    grid-column: 1 / 2;
+  }
+
+  .sidebar {
+    grid-column: 2 / 3;
+  }
+
+  .routine-section {
+    grid-column: 1 / 3;
+  }
+
+  .routine-cards,
+  .tips-cards {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .tips-layout {
+    grid-template-columns: 2fr 1fr;
+  }
+
+  .tips-intro,
+  .tips-highlight,
+  .tips-list {
+    grid-column: 1 / 2;
+  }
+
+  .tips-sidebar {
+    grid-column: 2 / 3;
+    grid-row: 1 / 4;
+  }
+}
+
+@media (min-width: 64em) {
+  .home-layout {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .home-mission {
+    grid-column: 1 / 3;
+  }
+
+  .home-image {
+    grid-column: 3 / 5;
+  }
+
+  .home-trust {
+    grid-column: 1 / 3;
+  }
+
+  .home-links {
+    grid-column: 3 / 5;
+  }
+
+  .page-grid {
+    grid-template-columns: 1fr 2fr;
+    align-items: start;
+  }
+
+  .intro {
+    grid-column: 1 / 2;
+  }
+
+  .sidebar {
+    grid-column: 1 / 2;
+  }
+
+  .routine-section {
+    grid-column: 2 / 3;
+    grid-row: 1 / 3;
+  }
+
+  .routine-cards {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .tips-cards {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
